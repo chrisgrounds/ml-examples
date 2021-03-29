@@ -8,7 +8,7 @@ export default function Increment() {
 
       <p className={styles.description}>State of the art machine learning counting service</p>
 
-      <p className={styles.description}>Model coming soon...</p>
+      <p className={`${styles.description} text-purple-600`}>Model coming soon...</p>
     </Page>
   )
 }

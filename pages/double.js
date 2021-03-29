@@ -8,7 +8,7 @@ export default function Double() {
 
       <p className={styles.description}>Machine learning powered function that doubles numbers</p>
 
-      <p className={styles.description}>Model coming soon...</p>
+      <p className={`${styles.description} text-purple-600`}>Model coming soon...</p>
     </Page>
   )
 }
