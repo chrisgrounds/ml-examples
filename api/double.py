@@ -2,6 +2,7 @@
 from http.server import BaseHTTPRequestHandler
 from os.path import join
 import numpy as np
+import pickle
 
 
 class handler(BaseHTTPRequestHandler):
@@ -10,8 +11,10 @@ class handler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
-        with open(join('data', 'file.txt'), 'r') as file:
-            for line in file:
-                self.wfile.write(line.encode())
-        self.wfile.write(str(np.random.choice([1, 2, 3, 4, 5, 6])).encode())
+
+        model = pickle.load(open('data', 'double-model.pk', 'rb'))
+
+        prediction = model.predict(100)
+
+        self.wfile.write(str(prediction)).encode())
         return
