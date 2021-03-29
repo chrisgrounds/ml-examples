@@ -1,7 +1,7 @@
 # api/user.py
 from http.server import BaseHTTPRequestHandler
 from os.path import join
-from pickle import load
+from joblib import load
 
 
 class handler(BaseHTTPRequestHandler):
