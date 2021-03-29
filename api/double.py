@@ -11,7 +11,7 @@ class handler(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
 
-        model = load(open(join('data', 'increment-model.pk'), 'rb'))
+        model = load(open(join('data', 'increment-model.job'), 'rb'))
 
         prediction = model.predict(100)
 
