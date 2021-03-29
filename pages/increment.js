@@ -7,6 +7,8 @@ export default function Increment() {
       <h1 className={styles.title}>Increment</h1>
 
       <p className={styles.description}>State of the art machine learning counting service</p>
+
+      <p className={styles.description}>Model coming soon...</p>
     </Page>
   )
 }
