@@ -3,6 +3,8 @@ from http.server import BaseHTTPRequestHandler
 from os.path import join
 import numpy as np
 import pickle
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
 
 
 class handler(BaseHTTPRequestHandler):
