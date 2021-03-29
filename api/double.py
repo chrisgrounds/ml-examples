@@ -16,5 +16,5 @@ class handler(BaseHTTPRequestHandler):
 
         prediction = model.predict(100)
 
-        self.wfile.write(str(prediction)).encode())
+        self.wfile.write(str(prediction).encode())
         return
