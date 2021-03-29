@@ -12,7 +12,7 @@ class handler(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
 
-        model = pickle.load(open('data', 'double-model.pk', 'rb'))
+        model = pickle.load(open(join('data', 'increment-model.pk'), 'rb'))
 
         prediction = model.predict(100)
 
