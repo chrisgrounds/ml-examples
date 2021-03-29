@@ -1,8 +1,7 @@
 # api/user.py
 from http.server import BaseHTTPRequestHandler
 from os.path import join
-import numpy as np
-import pickle
+from pickle import load
 
 
 class handler(BaseHTTPRequestHandler):
@@ -12,7 +11,7 @@ class handler(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
 
-        model = pickle.load(open(join('data', 'increment-model.pk'), 'rb'))
+        model = load(open(join('data', 'increment-model.pk'), 'rb'))
 
         prediction = model.predict(100)
 

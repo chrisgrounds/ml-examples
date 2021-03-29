@@ -1,8 +1,7 @@
 # api/user.py
 from http.server import BaseHTTPRequestHandler
 from os.path import join
-import numpy as np
-import pickle
+from pickle import load
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 
@@ -14,7 +13,7 @@ class handler(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
 
-        model = pickle.load(open(join('data', 'increment-model.pk'), 'rb'))
+        model = load(open(join('data', 'increment-model.pk'), 'rb'))
 
         prediction = model.predict(100)
 
