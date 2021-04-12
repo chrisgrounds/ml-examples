@@ -31,7 +31,7 @@ export default function Double() {
             <input
               id="x_input"
               type="text"
-              className="h-full w-full rounded-sm border-gray-300 border-2 px-2 transition-all border-blue rounded-sm"
+              className="h-full w-full text-center rounded-sm border-gray-300 border-2 px-2 transition-all border-blue rounded-sm"
               value={xInput}
               onChange={e => setXInput(e.target.value)}
             />
