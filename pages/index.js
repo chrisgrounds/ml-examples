@@ -1,13 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Page from "../components/Page";
-
-const Card = ({ title, desc, href }) => (
-  <a href={href} className={styles.card}>
-    <h3>{title}</h3>
-    <p>{desc}</p>
-  </a>
-);
+import Card from "../components/Card";
 
 export default function Home() {
   return (
